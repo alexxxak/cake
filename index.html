@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: hotpink;
+
+    }
+
+    button{
+        background-color: darkmagenta;
+        color: hotpink;
+    }
+</style>
+<body>
+
+    <button onclick="whatCake()">Trykk her for å få en kake!</button>
+    <p id="resultat"></p>
+    <script>
+        //Random kakebake app!
+        //1. array med forskjellige ting man kan bake
+        //2. bruke math.random() til å trekke ut en tilfeldig baketing
+
+        let bakingGoods = ["Sjokoladekake", "Marsipankake", "Ostekake", "Verdens beste", "Brownies", "Red velvet", "Rullekake"];
+    
+    
+        //console.log(bakingGoods[1])
+        let randomIndex = Math.floor(Math.random() * bakingGoods.length);
+        //console.log(bakingGoods[randomIndex]);
+        
+        //LAGE ET VIEW MED EN KNAPP SOM GIR RANDOM KAKE PÅ SKJERMEN
+
+        function whatCake() {
+         let randomIndex = Math.floor(Math.random() * bakingGoods.length);
+         let cake = bakingGoods[randomIndex];
+
+         document.getElementById("resultat").innerText = "I dag skal du bake: " + cake + " 🎂";
+        
+        }
+    </script>
+    
+</body>
+</html>
